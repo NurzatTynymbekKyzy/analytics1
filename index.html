@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нурзат | Обучение Бизнес-аналитике</title>
+    <style>
+        /* CSS СТИЛИ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Навигация */
+        header {
+            background: #1a2a6c;
+            color: #fff;
+            padding: 1rem 10%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f2a343;
+        }
+
+        /* Главный экран */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f2a343;
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #d98c2d;
+            transform: translateY(-3px);
+        }
+
+        /* Секция программы */
+        section {
+            padding: 80px 10%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #1a2a6c;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-top: 5px solid #1a2a6c;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #1a2a6c;
+        }
+
+        /* Контакты */
+        #contact {
+            background: #1a2a6c;
+            color: #fff;
+        }
+
+        #contact h2 {
+            color: #fff;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        /* Подвал */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">NURZAT.ANALYTICS</div>
+            <ul>
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#modules">Программа</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Стань бизнес-аналитиком <br>с Нурзат</h1>
+            <p>Практический курс для тех, кто хочет научиться превращать хаос в структурированные бизнес-требования и строить успешную карьеру в IT.</p>
+            <a href="#contact" class="btn">Записаться на консультацию</a>
+        </div>
+    </section>
+
+    <section id="modules">
+        <h2>Что мы изучим?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>01. Фундамент BA</h3>
+                <p>Роль аналитика в команде, жизненный цикл разработки ПО (SDLC) и основные навыки.</p>
+            </div>
+            <div class="card">
+                <h3>02. Моделирование</h3>
+                <p>Проектирование процессов в нотациях BPMN и UML. Визуализация потоков данных.</p>
+            </div>
+            <div class="card">
+                <h3>03. Требования</h3>
+                <p>Работа с функциональными и нефункциональными требованиями. Написание User Stories.</p>
+            </div>
+            <div class="card">
+                <h3>04. SQL и Данные</h3>
+                <p>Основы работы с базами данных для извлечения и анализа информации.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Начни свой путь сегодня</h2>
+        <form onsubmit="alert('Спасибо, Нурзат скоро с вами свяжется!'); return false;">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш Email" required>
+            <textarea rows="5" placeholder="Ваш вопрос или сообщение"></textarea>
+            <button type="submit" class="btn">Отправить заявку</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Обучение бизнес-аналитике с Нурзат. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
